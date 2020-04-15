@@ -1,0 +1,32 @@
+<div class="container"><br>
+    <div class="centr">
+        <div>
+            <a [routerLink]="['/']" class="right"> на главную </a>
+            
+            <div align="right">
+                <a [routerLink]="['/update', currentId]" class="edit">edit  </a>
+            </div>
+        </div>
+        <div>
+            <div>
+            <div align="center">
+                
+                <a [routerLink]="['/update', post._id]" class="edit"><h3 >{{post.title}}</h3></a>
+                <small > 
+                    <strong style="color: crimson;">{{post.category}}</strong> 
+                </small>
+            </div>
+              <br>
+              <div class="todo-center">
+                <p align="center">{{post.description}}</p>
+              </div>
+            </div>
+        </div>
+        
+        
+    
+          
+    </div>
+    
+</div>
+

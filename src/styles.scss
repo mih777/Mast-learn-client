@@ -1,0 +1,29 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+a {
+    color: #10447b;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 700px;
+    
+    overflow: hidden;
+    text-align: center;
+}
+
+.table {
+     
+    // overflow-y:auto; 
+    // width:100%; 
+}
+
+ 
+
+table {
+    table-layout:fixed;
+}
+
+td{
+    word-wrap:break-word
+ }

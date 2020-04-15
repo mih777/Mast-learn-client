@@ -1,0 +1,64 @@
+<div class="container">
+
+        <br>
+        <a routerLink="/create" style="float: left;">Добавить задание</a>
+        <div class="right">
+          <select 
+            class="form-control" 
+            (input)="inpSelect($event)" 
+            [(ngModel)]="catName"
+          >
+            <option selected="selected">all</option>
+            <option>Angular</option>
+            <option>TypeScript</option>
+            <option>General</option>
+        </select>
+        </div>
+        <div>
+          <h3 align="center"> MustLearn </h3><br>
+          <small>Сейчас выводится категория: 
+            <strong style="color: crimson;">{{catName}}</strong>
+            всего: {{quantity}} 
+          </small>
+        </div>
+    <!--  -->
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Actions</th>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+        
+          <tbody *ngFor="let todo of todos; let i = index;" >
+            <tr>       
+              <td>
+                <div>
+                  <div class="block">
+                    <a [routerLink]="['/todo', todo._id]">{{ todo.title}}</a>
+                  </div>
+                  <div class="block div-right" *ngIf="todo.description == 0">
+                    no content
+                  </div>
+                </div>
+              </td>
+
+              <td>
+                  <div >
+                      <a [routerLink]="['/update', todo._id]" class="edit">edit  </a>
+                      <a 
+                        href="" 
+                        onclick="event.preventDefault()" 
+                        (click)="removeTodo(todo._id)" 
+                        class="delete">delete  
+                      </a>
+                  </div>   
+              </td>
+              <td >{{ todo.category }}</td> 
+            </tr>
+          </tbody>
+        
+      </table>  
+</div>
+

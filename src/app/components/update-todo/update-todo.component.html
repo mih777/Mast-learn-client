@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="centr">
+  <br><h3 align="center"> Страница редактирования задания </h3><br>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Название задания</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          formControlName = "title" 
+          placeholder="введите название"
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Категория</label>
+        <select 
+          class="form-control" 
+          formControlName = "category"
+        >
+          <option>Angular</option>
+          <option>TypeScript</option>
+          <option>General</option>
+        </select>
+
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Описание задания</label>
+        <textarea 
+          class="form-control" 
+          rows="3" 
+          placeholder="введите описание"
+          formControlName = "description"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Сохранить</button>
+      <a [routerLink]="['/']" class="right"> Вернуться на главную страницу  </a>
+    </form>
+  </div>
+</div>
