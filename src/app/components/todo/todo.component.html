@@ -1,16 +1,15 @@
 <div class="container"><br>
-    <div class="centr">
+    
         <div>
-            <a [routerLink]="['/']" class="right"> на главную </a>
-            
-            <div align="right">
-                <a [routerLink]="['/update', currentId]" class="edit">edit  </a>
+            <div align="left">
+                <a [routerLink]="['/']" class="right"> < В список </a>
             </div>
+            
         </div>
         <div>
             <div>
             <div align="center">
-                
+                <small style="color: gray;">Нажмите для редактирорвания</small>
                 <a [routerLink]="['/update', post._id]" class="edit"><h3 >{{post.title}}</h3></a>
                 <small > 
                     <strong style="color: crimson;">{{post.category}}</strong> 
@@ -22,11 +21,7 @@
               </div>
             </div>
         </div>
-        
-        
-    
-          
-    </div>
+
     
 </div>
 
