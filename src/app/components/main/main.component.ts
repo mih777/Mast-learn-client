@@ -16,7 +16,7 @@ export class MainComponent implements
   arrayId = []
   todos: Todo[] = []
   catName = this.todoService.catName
-  
+  loading: boolean = false
   quantity: number
 
   constructor(
@@ -52,10 +52,12 @@ export class MainComponent implements
   }
 
   fetchAllTodos(){
+    this.loading = true
     this.todoService.getAll()
       .subscribe(result => {
         this.quantity = result.length
         this.todos = result
+        this.loading = false
       })
   }
 

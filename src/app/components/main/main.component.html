@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" >
 
         <br>
         <a routerLink="/create" style="float: left;">Добавить задание</a>
@@ -22,7 +22,8 @@
           </small>
         </div>
     <!--  -->
-    <table class="table table-bordered">
+    <div *ngIf="!loading; else loadingBlock">
+      <table class="table table-bordered" >
         <thead>
           <tr>
             <th scope="col">Title</th>
@@ -31,34 +32,48 @@
           </tr>
         </thead>
         
-          <tbody *ngFor="let todo of todos; let i = index;" >
-            <tr>       
-              <td>
-                <div>
-                  <div class="block">
-                    <a [routerLink]="['/todo', todo._id]">{{ todo.title}}</a>
+          
+            <tbody *ngFor="let todo of todos; let i = index;" >
+              <tr>       
+                <td>
+                  <div>
+                    <div class="block">
+                      <a [routerLink]="['/todo', todo._id]">{{ todo.title}}</a>
+                    </div>
+                    <div class="block div-right" *ngIf="todo.description == 0">
+                      no content
+                    </div>
                   </div>
-                  <div class="block div-right" *ngIf="todo.description == 0">
-                    no content
-                  </div>
-                </div>
-              </td>
+                </td>
+  
+                <td>
+                    <div >
+                        <a [routerLink]="['/update', todo._id]" class="edit">edit  </a>
+                        <a 
+                          href="" 
+                          onclick="event.preventDefault()" 
+                          (click)="removeTodo(todo._id)" 
+                          class="delete">delete  
+                        </a>
+                    </div>   
+                </td>
+                <td >{{ todo.category }}</td> 
+              </tr>
+            </tbody>
+          
 
-              <td>
-                  <div >
-                      <a [routerLink]="['/update', todo._id]" class="edit">edit  </a>
-                      <a 
-                        href="" 
-                        onclick="event.preventDefault()" 
-                        (click)="removeTodo(todo._id)" 
-                        class="delete">delete  
-                      </a>
-                  </div>   
-              </td>
-              <td >{{ todo.category }}</td> 
-            </tr>
-          </tbody>
-        
-      </table>  
+          
+
+      </table> 
+
+      
+    </div> 
+
+    <ng-template #loadingBlock>
+      <p>Сейчас загрузится, подождите...</p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </ng-template>
 </div>
 
