@@ -10,6 +10,8 @@ import { UpdateTodoComponent } from './components/update-todo/update-todo.compon
 import { MainComponent } from './components/main/main.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { LoaderComponent } from './shared/component/loader/loader.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { LoaderComponent } from './shared/component/loader/loader.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

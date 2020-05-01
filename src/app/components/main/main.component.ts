@@ -21,7 +21,7 @@ export class MainComponent implements
 
   constructor(
     private todoService: TodoServiceService
-  ) {console.log('Constructor') }
+  ) { }
 
   ngOnChanges(changes: SimpleChanges){
     console.log('ngOnChanges', changes)
