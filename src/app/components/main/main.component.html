@@ -24,39 +24,33 @@
     <!--  -->
     <div *ngIf="!loading; else loadingBlock">
       <table class="table table-bordered " >
-        <thead>
-          <tr>
-            <!-- <th scope="row">1</th> -->
-            <th scope="row">Title</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
         
-          
             <tbody *ngFor="let todo of todos; let i = index;" >
               <tr>       
                 <td>
                   <div>
                     <div class="block">
-                      <div class="small">{{ todo.category }}</div>
-                      <a [routerLink]="['/todo', todo._id]">{{ todo.title}}</a>
+                      <div class="small">{{ todo.category }}</div><br>
+                      <h5>
+                        <a 
+                        [routerLink]="['/todo', todo._id]"
+                      >{{ todo.title}}</a>
+                      </h5>
                     </div>
                     <div class="block div-right" *ngIf="todo.description == 0">
                       no content
                     </div>
                   </div>
-                </td>
-  
-                <td>
-                    <div >
-                        <a [routerLink]="['/update', todo._id]" class="edit">edit  </a>
-                        <a 
-                          href="" 
-                          onclick="event.preventDefault()" 
-                          (click)="removeTodo(todo._id)" 
-                          class="delete">delete  
-                        </a>
-                    </div>   
+
+                  <div >
+                    <a [routerLink]="['/update', todo._id]" class="edit">edit  </a>
+                    <a 
+                      href="" 
+                      onclick="event.preventDefault()" 
+                      (click)="removeTodo(todo._id)" 
+                      class="delete">delete  
+                    </a>
+                </div>
                 </td>
                  
               </tr>
