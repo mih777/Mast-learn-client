@@ -28,7 +28,6 @@
           <tr>
             <th scope="col">Title</th>
             <th scope="col">Actions</th>
-            <th scope="col">Category</th>
           </tr>
         </thead>
         
@@ -38,6 +37,7 @@
                 <td>
                   <div>
                     <div class="block">
+                      <div class="small">{{ todo.category }}</div>
                       <a [routerLink]="['/todo', todo._id]">{{ todo.title}}</a>
                     </div>
                     <div class="block div-right" *ngIf="todo.description == 0">
@@ -57,7 +57,7 @@
                         </a>
                     </div>   
                 </td>
-                <td >{{ todo.category }}</td> 
+                 
               </tr>
             </tbody>
           
