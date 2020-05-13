@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1589398193510,
+  "timestamp": 1589399269163,
   "index": "https://mih777.github.io/Mast-learn-client/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "https://mih777.github.io/Mast-learn-client/favicon.ico",
         "https://mih777.github.io/Mast-learn-client/index.html",
-        "https://mih777.github.io/Mast-learn-client/main-es2015.ef01325afdc52ae0a8ba.js",
-        "https://mih777.github.io/Mast-learn-client/main-es5.ef01325afdc52ae0a8ba.js",
+        "https://mih777.github.io/Mast-learn-client/main-es2015.f6cc5197af2c7f2a8f3f.js",
+        "https://mih777.github.io/Mast-learn-client/main-es5.f6cc5197af2c7f2a8f3f.js",
         "https://mih777.github.io/Mast-learn-client/manifest.webmanifest",
         "https://mih777.github.io/Mast-learn-client/polyfills-es2015.1f913f16a2d346cc8bdc.js",
         "https://mih777.github.io/Mast-learn-client/polyfills-es5.1a3c78b07cd6f16c6e9a.js",
         "https://mih777.github.io/Mast-learn-client/runtime-es2015.0811dcefd377500b5b1a.js",
         "https://mih777.github.io/Mast-learn-client/runtime-es5.0811dcefd377500b5b1a.js",
-        "https://mih777.github.io/Mast-learn-client/styles.042608d75198032d78e2.css"
+        "https://mih777.github.io/Mast-learn-client/styles.64ecbd07f0cbaaabd890.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Roboto",
@@ -63,15 +63,15 @@
     "https://mih777.github.io/Mast-learn-client/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://mih777.github.io/Mast-learn-client/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://mih777.github.io/Mast-learn-client/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://mih777.github.io/Mast-learn-client/index.html": "34f6ed6aac425f900c8f68b616a96fd59cc6ec62",
-    "https://mih777.github.io/Mast-learn-client/main-es2015.ef01325afdc52ae0a8ba.js": "35d43efdb752de2c8cb74d8a4fc03433bffe6e7b",
-    "https://mih777.github.io/Mast-learn-client/main-es5.ef01325afdc52ae0a8ba.js": "6f483348cf8b27b2db00c243d2fb6758b252fc52",
+    "https://mih777.github.io/Mast-learn-client/index.html": "24ec116f9e8daf6cdc7d55f7c12f7b2da2ec33f5",
+    "https://mih777.github.io/Mast-learn-client/main-es2015.f6cc5197af2c7f2a8f3f.js": "8316e293fec5892ed4be9fb337496e473ced3d99",
+    "https://mih777.github.io/Mast-learn-client/main-es5.f6cc5197af2c7f2a8f3f.js": "054f95ec6eee65dcf8658cd287a126412712d9e6",
     "https://mih777.github.io/Mast-learn-client/manifest.webmanifest": "6bd446cf481e91dc7da6926e0d9b5fb2029c63fa",
     "https://mih777.github.io/Mast-learn-client/polyfills-es2015.1f913f16a2d346cc8bdc.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "https://mih777.github.io/Mast-learn-client/polyfills-es5.1a3c78b07cd6f16c6e9a.js": "e5472003c8575a8fca7583648df3905038faeb18",
     "https://mih777.github.io/Mast-learn-client/runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "https://mih777.github.io/Mast-learn-client/runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "https://mih777.github.io/Mast-learn-client/styles.042608d75198032d78e2.css": "607d406f3cc8c25f93c49f5fa13c2764a7104422"
+    "https://mih777.github.io/Mast-learn-client/styles.64ecbd07f0cbaaabd890.css": "231c29a368e11a383cd06afbaecdad476b3908b8"
   },
   "navigationUrls": [
     {
