@@ -9,7 +9,7 @@ a {
     max-width: 700px;
     
     overflow: hidden;
-    text-align: center;
+    
 }
 
 .table {
@@ -29,7 +29,10 @@ td{
 }
 
 .small {
-    font-size: 20px;
+    font-size: 9px;
+    float: left;
+    color: #2196f3;
+    vertical-align: top;
 }
 
 .left {
