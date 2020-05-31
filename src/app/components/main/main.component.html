@@ -8,41 +8,62 @@
             (input)="inpSelect($event)" 
             [(ngModel)]="catName"
           >
-            <option selected="selected">all</option>
+            <option>all</option>
             <option>Angular</option>
             <option>TypeScript</option>
             <option>General</option>
         </select>
+        <label for="exampleInputEmail1"><small>select category</small></label>
         </div>
         <div>
           <h3 align="center"> MustLearn </h3><br>
-          <small>Сейчас выводится категория: 
+          <small>Сейчас выводится категория: </small>
             <strong style="color: crimson;">{{catName}}</strong>
-            всего: {{quantity}} 
-          </small>
-        </div>
-    <!--  -->
-    <div *ngIf="!loading; else loadingBlock">
-
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" (click)="to_begin()">в начало</a></li>
-          <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="decrise()" href=""> << </a></li>
-    
-          <li class="page-item" *ngFor="let p of pages"><a class="page-link" (click)="click_number_page(p)">{{p}}</a></li>
+            <!-- всего: {{quantity}}  -->
           
-          <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="incrise()" href=""> >> </a></li>
-          <li class="page-item"><a class="page-link" (click)="to_end()">в конец </a></li> 
-        </ul>
-      </nav>
+        </div><br>
+    <!--  -->
+    <div >
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" (click)="to_begin()">в начало</a></li>
+                  <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="decrise()" href=""> < prev </a></li>
+            
+                  <!-- <li class="page-item" *ngFor="let p of pages"><a class="page-link" (click)="click_number_page(p)"></a></li> -->
+                  
+                  <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="incrise()" href=""> next > </a></li>
+                  <!-- <li class="page-item"><a class="page-link" (click)="to_end()">в конец </a></li>  -->
+                </ul>
+              </nav>
+            </div>
+                  
+            <div class="col-md-6">
+              <select (change)="item_qwantity_on_page($event)" class="form-control">
+                <option>{{ pagination }}</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <table class="table table-bordered " >
         
             <tbody *ngFor="let todo of todos; let i = index;" >
               <tr>       
                 <td>
-                  <div>
-                    <div class="block">
+                  <div *ngIf="!loading; else loadingBlock">
+                    <div class="block" >
                       <div class="small">{{ todo.category }}</div><br>
                       <h5>
                         <a 
@@ -67,18 +88,13 @@
                 </td>
                  
               </tr>
-            </tbody>
-          
-
-          
-
+            </tbody>  
       </table> 
 
-      
     </div> 
 
     <ng-template #loadingBlock>
-      <p>Сейчас загрузится, подождите...</p>
+      <p>Загрузка данных, подождите...</p>
       <div class="spinner-border text-primary" role="status">
         <span class="sr-only">Loading...</span>
       </div>

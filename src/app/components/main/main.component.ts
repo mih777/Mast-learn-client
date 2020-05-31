@@ -9,8 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements
-  OnInit,
-  OnChanges 
+  OnInit 
 {
 
   arrayId = []
@@ -34,9 +33,7 @@ export class MainComponent implements
     private todoService: TodoServiceService
   ) { }
 
-  ngOnChanges(changes: SimpleChanges){
-    console.log('ngOnChanges', changes)
-  }
+  
 
   ngOnInit(): void {
 
@@ -50,9 +47,13 @@ export class MainComponent implements
 
         this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)
       }) 
+  
     
-    
-    
+  }
+
+  item_qwantity_on_page(qw){
+    this.pagination = qw.target.value
+    this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)
   }
 
   click_number_page(page){
@@ -67,13 +68,13 @@ export class MainComponent implements
     this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)  
   }
 
-  to_end(){
-    this.oSub3 = this.todoService.get_all_noparams()
-      .subscribe(res => {
-        this.page = Math.ceil(res.length/this.pagination)
-        this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)
-      })
-  }
+  // to_end(){
+  //   this.oSub3 = this.todoService.get_all_noparams()
+  //     .subscribe(res => {
+  //       this.page = Math.ceil(res.length/this.pagination)
+  //       this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)
+  //     })
+  // }
 
   decrise(){
     
