@@ -11,8 +11,8 @@ export class TodoServiceService {
 
   catName: string = 'all'
   currentId: string 
-  //url = 'https://mast-learn-server.herokuapp.com'
-  url = 'http://localhost:3000'
+  url = 'https://mast-learn-server.herokuapp.com'
+  //url = 'http://localhost:3000'
 
   constructor(private http: HttpClient) { }
 
