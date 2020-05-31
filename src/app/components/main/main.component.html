@@ -23,19 +23,20 @@
         </div>
     <!--  -->
     <div *ngIf="!loading; else loadingBlock">
-      <table class="table table-bordered " >
 
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" (click)="to_begin()">в начало</a></li>
-            <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="decrise()" href=""> << </a></li>
-      
-            <li class="page-item" *ngFor="let p of pages"><a class="page-link" (click)="click_number_page(p)">{{p}}</a></li>
-            
-            <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="incrise()" href=""> >> </a></li>
-            <li class="page-item"><a class="page-link" (click)="to_end()">в конец </a></li> 
-          </ul>
-        </nav>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" (click)="to_begin()">в начало</a></li>
+          <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="decrise()" href=""> << </a></li>
+    
+          <li class="page-item" *ngFor="let p of pages"><a class="page-link" (click)="click_number_page(p)">{{p}}</a></li>
+          
+          <li class="page-item"><a class="page-link" onclick="event.preventDefault()" (click)="incrise()" href=""> >> </a></li>
+          <li class="page-item"><a class="page-link" (click)="to_end()">в конец </a></li> 
+        </ul>
+      </nav>
+
+      <table class="table table-bordered " >
         
             <tbody *ngFor="let todo of todos; let i = index;" >
               <tr>       
