@@ -26,9 +26,9 @@
     <div >
 
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 box">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-10">
               <nav aria-label="Page navigation example">
                 <ul class="pagination">
                   <li class="page-item"><a class="page-link" (click)="to_begin()">в начало</a></li>
@@ -42,8 +42,8 @@
               </nav>
             </div>
                   
-            <div class="col-md-6">
-              <select (change)="item_qwantity_on_page($event)" class="form-control">
+            <div class="col-md-2">
+              <select (change)="item_qwantity_on_page($event)" class="form-control small-select" >
                 <option>{{ pagination }}</option>
                 <option>1</option>
                 <option>2</option>

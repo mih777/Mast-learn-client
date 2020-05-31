@@ -12,6 +12,20 @@ a {
     
 }
 
+.box{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div{
+    flex: 1
+}
+
+.small-select{
+    width: 70px;
+}
+
 .table {
      
     // overflow-y:auto; 
