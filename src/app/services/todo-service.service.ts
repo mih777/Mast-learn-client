@@ -25,11 +25,11 @@ export class TodoServiceService {
   // }
 
   get_all_noparams():Observable<Todo[]>{
-    return this.http.get<Todo[]>(`http://localhost:3000/api/todos`)
+    return this.http.get<Todo[]>(`${this.url}/api/todos`)
   }
 
   get_all(pagination, page):Observable<Todo[]>{
-    return this.http.get<Todo[]>(`http://localhost:3000/api/todos?pagination=${pagination}&page=${page}`)
+    return this.http.get<Todo[]>(`${this.url}/api/todos?pagination=${pagination}&page=${page}`)
   }
 
   // get all by category
