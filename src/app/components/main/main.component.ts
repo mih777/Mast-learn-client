@@ -112,7 +112,9 @@ export class MainComponent implements
       .subscribe(res => {
         
         if(res.length === 0){
+          this.todos = []
           this.limit_array = true
+          //this.loading = false
           return
         } else{
           this.quantity = res.length
