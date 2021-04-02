@@ -68,14 +68,6 @@ export class MainComponent implements
     this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)  
   }
 
-  // to_end(){
-  //   this.oSub3 = this.todoService.get_all_noparams()
-  //     .subscribe(res => {
-  //       this.page = Math.ceil(res.length/this.pagination)
-  //       this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)
-  //     })
-  // }
-
   decrise(){
     
     if(this.page === 1){
@@ -132,10 +124,14 @@ export class MainComponent implements
   }
 
   removeTodo(id: string): void{
-    this.todoService.delete(id)
+    let isBoss = confirm("Действительно удалить?");
+    if(isBoss){
+      this.todoService.delete(id)
       .subscribe(() => {
-        this.todoService.catName == 'all' ? this.fetchAllTodos() : this.fetchTodosByCategory(this.todoService.catName)
-      }) 
+        this.todoService.catName == 'all' ? this.fetchAllTodos()
+         : this.fetchTodosByCategory(this.todoService.catName)
+      })
+    } 
     
   }
 
