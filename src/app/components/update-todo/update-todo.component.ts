@@ -20,11 +20,19 @@ export class UpdateTodoComponent implements OnInit {
     private todoService: TodoServiceService,
     private router: Router,
     private route: ActivatedRoute
-  ) { }
+  ) {
+    this.form = new FormGroup({
+      title: new FormControl(),
+      category: new FormControl(),
+      description: new FormControl() 
+    }) 
+
+  }
 
 
 
   ngOnInit(): void {
+    
     this.route.params.pipe(
       switchMap((params: Params) => {
         return this.todoService.getById(params['id'])
