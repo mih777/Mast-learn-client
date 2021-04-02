@@ -1,7 +1,14 @@
 <div class="container" >
 
         <br>
-        <a routerLink="/create" style="float: left;">Добавить задание</a>
+        <div>
+          <a routerLink="/create" style="float: left;">Добавить задание</a>
+        </div>
+
+        <div>
+          <h3 align="center" class="gottalearn"> Gotta Learn </h3><br>
+        </div>
+
         <div class="right">
           <select 
             class="form-control" 
@@ -15,13 +22,16 @@
         </select>
         <label for="exampleInputEmail1"><small>select category</small></label>
         </div>
+
         <div>
-          <h3 align="center"> Gotta Learn </h3><br>
-          <small>Сейчас выводится категория: </small>
+          <div class="mobile">
+          <small>категория: </small>
             <strong style="color: crimson;">{{catName}}</strong>
-            <!-- всего: {{quantity}}  -->
+          </div>
+            
           
         </div><br>
+        
     <!--  -->
     <div >
 
