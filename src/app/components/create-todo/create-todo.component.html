@@ -25,12 +25,13 @@
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Описание задания</label>
-          <textarea 
-            class="form-control" 
-            rows="3" 
-            placeholder="введите описание"
-            formControlName = "description"
-          ></textarea>
+
+          <quill-editor 
+                
+                formControlName="description"
+          ></quill-editor>
+
+
         </div>
         <button 
         type="submit" 
